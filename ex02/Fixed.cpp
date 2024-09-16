@@ -108,3 +108,61 @@ bool Fixed::operator!=(const Fixed &copy) const {
 	}
 	return false;
 }
+
+Fixed Fixed::operator+(const Fixed &copy) const {
+	Fixed result(this->toFloat() + copy.toFloat());
+	return result;
+}
+Fixed Fixed::operator-(const Fixed &copy) const {
+	Fixed result(this->toFloat() - copy.toFloat());
+	return result;
+}
+Fixed Fixed::operator*(const Fixed &copy) const {
+	Fixed result(this->toFloat() * copy.toFloat());
+	return result;
+}
+Fixed Fixed::operator/(const Fixed &copy) const {
+	Fixed result(this->toFloat() / copy.toFloat());
+	return result;
+}
+
+Fixed &Fixed::operator++(void) {
+	this->setRawBits(this->getRawBits() + 1);
+	return *this;
+}
+Fixed &Fixed::operator--(void) {
+	this->setRawBits(this->getRawBits() - 1);
+	return *this;
+}
+
+Fixed Fixed::operator++(int number) {
+	Fixed aux;
+
+	aux = *this;
+	if (!number) {
+		number = 1;
+	}
+	this->setRawBits(this->getRawBits() + number);
+	return aux;
+}
+Fixed Fixed::operator--(int number) {
+	Fixed aux;
+
+	aux = *this;
+	if (!number) {
+		number = 1;
+	}
+	this->setRawBits(this->getRawBits() - number);
+	return aux;
+}
+
+const Fixed &Fixed::min(const Fixed &copy1, const Fixed &copy2) {
+	if (copy1 > copy2)
+		return copy2;
+	return copy1;
+}
+const Fixed &Fixed::max(const Fixed &copy1, const Fixed &copy2) {
+	if (copy1 < copy2)
+		return copy2;
+	return copy1;
+}
