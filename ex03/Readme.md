@@ -1,5 +1,8 @@
 # BSP Triangle Point-Inclusion Project
 
+
+<img src="triangle.png"   alt="Triangle Image" align="right" width="300" height="420">
+
 This project aims to implement a function that checks if a point is inside a triangle using the `Fixed` class. BSP (Binary Space Partitioning) is a method used in 2D and 3D space partitioning, and here it is applied to solve the problem of determining whether a point lies inside a triangle. The triangle is defined by three points (vertices), and the goal is to check if a given point falls within the boundaries of this triangle.
 
 I also includesd tests to validate different cases where a point is either inside or outside various triangles. Below are several test sets with triangle vertices and points inside or outside those triangles.
@@ -114,6 +117,7 @@ For each set:
 - p 5 -2
 - p -3 -2
 - p 1 -4
-
+<!---
 ![Triangle Diagram](triangle.png)
+--->
 
