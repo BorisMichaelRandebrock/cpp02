@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 11:43:08 by brandebr          #+#    #+#             */
-/*   Updated: 2024/09/18 14:03:01 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/09/18 15:47:09 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Point {
 		Fixed getX(void) const;
 		Fixed getY(void) const;
 		friend std::ostream& operator<<(std::ostream& os, const Point& point);
-
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
