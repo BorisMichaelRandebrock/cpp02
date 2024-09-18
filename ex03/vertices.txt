@@ -80,5 +80,8 @@ p 1 -4
 
 
 
+base64 -d image_base64.txt > new_image.png
+
+
 
 
